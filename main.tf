@@ -18,7 +18,7 @@ resource "sonarqube_webhook" "webhook" {
 
 resource "jenkins_credential_secret_text" "sonarqube-api-key" {
   name   = "sonarqube-api-key"
-  secret = var.sonarqube_api_key
+  secret = sonarqube_webhook.webhook.id
 
   depends_on = [
     sonarqube_webhook.webhook

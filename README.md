@@ -1,0 +1,1 @@
+# module-sonarqube-jenkins-config

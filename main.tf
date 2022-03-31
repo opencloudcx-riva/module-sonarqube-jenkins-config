@@ -24,3 +24,7 @@ resource "jenkins_credential_secret_text" "sonarqube-api-key" {
     sonarqube_webhook.webhook
   ]
 }
+
+# configure sonarqube server in configuration
+
+# create github application?

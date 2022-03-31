@@ -11,6 +11,11 @@ terraform {
   }
 }
 
+resource "sonarqube_user_token" "admin-token" {
+  login_name = "admin"
+  name       = "jenkins-token"
+}
+
 resource "sonarqube_webhook" "webhook" {
   name = "jenkins-webhook"
   url  = "http://jenkins.jenkins.svc.cluster.local:8080/sonarqube-webhook/"
